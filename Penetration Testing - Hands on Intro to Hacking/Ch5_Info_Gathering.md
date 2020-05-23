@@ -28,3 +28,8 @@
 port is open without ever fully connecting to the target machine.
 * -sS is the flag for a SYN scan.
 * -oA will output in all file formats. This includes a greppable format to search for specific information
+
+## UDP Scans
+* In a UDP scan, nmap may send the packet to a protocol specifc port, depending on the port.
+* If nmap receives a response, the port is open. If the port is closed, nmap will receive an ICMP Port Unreachable message. If nmap receives no response, then either the port is open and the program listening does not respond to the query or the traffic is being filtered.
+* Nmap has difficulty distinguishing between an open and filtered UDP port.
